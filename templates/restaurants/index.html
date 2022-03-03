@@ -1,12 +1,16 @@
 <!DOCTYPE html>
+{% extends "base.html" %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>My Restaurant Aplication</title>
 </head>
 <body>
+{% block content %}
   <h1>
+
     Hello this is restaurants {{name}} and the person has {{age}} years old
   </h1>
+{% endblock %}
 </body>
 </html>

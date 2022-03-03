@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+{% block title %} Magazine {% endblock %}
+{% block content %}
+  <div>
+      <ul>
+              {% for a in queryset %}
+
+                {% if a.reporter.first_name == "John"%}
+
+                    <li>{{a.headline | upper}} was published by {{a.reporter.first_name}}</li>
+                          {%endif%}
+                {% endfor %}
+
+<!--  {% if condition %}-->
+<!--    ....-->
+<!--{% elif condition %}-->
+<!--    ....-->
+<!--{% else %}-->
+<!--    ....-->
+<!--{% endif %} -->
+      </ul>
+      {% if queryset%}
+        <h1>existe</h1>
+      {%endif%}
+
+
+  </div>
+{% endblock %}
+</body>
+</html>
